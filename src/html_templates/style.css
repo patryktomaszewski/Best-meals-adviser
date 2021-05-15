@@ -1,0 +1,47 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+.card__container {
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F8F8F8;
+}
+
+.best-meal__container {
+    padding-top: 5rem;
+}
+
+.best-meal__container h3 {
+    color: #e74c3c
+}
+
+h2, h3 {
+    font-weight: bold;
+}
+
+h2 {
+    color: #c0392b;
+}
+
+img {
+    width: 12rem;
+    height: 10rem;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+      <head>
+        <title>Flask Template Example</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link rel="stylesheet" href="../src/html_templates/style.css">
+        <style type="text/css">
+
+        </style>
+      </head>
+      <body>
+       {% for meal in data %}
+        <div class="card__container">
+              <h2>{{ meal }}</h2>
+              <br>
+              <img alt="Qries" src= {{data[meal]['image']}}>
+              <h3>Used Ingredients</h3>
+
+                <ul>
+                    {% for used in data[meal]['usedIngredients'] %}
+                        <li>{{ used }}</li>
+                    {% endfor %}
+                 </ul>
+
+                <h3>Missed Ingredients</h3>
+
+                <ul>
+                    {% for missed in data[meal]['missedIngredients'] %}
+                        <li>{{ missed }}</li>
+                    {% endfor %}
+                </ul>
+                 <h3>Calories: {{ data[meal]['calories'] }}</h3>
+                 <h3>proteins: {{ data[meal]['proteins'] }}</h3>
+                 <h3>carbohydates: {{ data[meal]['carbs'] }}</h3>
+       {% endfor %}
+
+        <div class="best-meal__container">
+            <h3>Best Meal For You: {{ best_meal }} </h3>
+        </div>
+</div>
+      <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+      </body>
+    </html>
